@@ -1,3 +1,8 @@
+
+#
+# Written by: http://github.com/newbamboo/example-html5-upload
+#
+
 require 'sinatra'
 require 'json'
 require 'lib/rack/raw_upload'
