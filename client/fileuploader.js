@@ -318,7 +318,8 @@ qq.FileUploader.prototype = {
     _uploadFile: function(fileContainer){            
         var id = this._handler.add(fileContainer);
         var name = this._handler.getName(id);        
-        this._options.onSubmit(id, name);        
+        if (false == this._options.onSubmit(id, name))
+          return false;
         this._addToList(id, name);
         this._handler.upload(id, this._options.params);        
     },      
